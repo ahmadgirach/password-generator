@@ -83,7 +83,7 @@ const Home: NextPage = () => {
               <p>{length}</p>
             </div>
             <div className='text-left space-y-3'>
-              <div className='flex items-center gap-2 sm:mt-5'>
+              <div className='flex items-center gap-2 sm:mt-6'>
                 <input
                   type="checkbox"
                   name="uppercase"
