@@ -43,7 +43,8 @@ const Home: NextPage = () => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(password)
     return toast('Copied to Clipboard!', {
-      duration: 1000,
+      duration: 1200,
+      position: 'top-right'
     })
   }
 
