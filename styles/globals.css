@@ -1,5 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
+
+#uppercase:checked~label div.toggle-dot {
+    @apply translate-x-4
+}
+
+#lowercase:checked~label div.toggle-dot {
+    @apply translate-x-4
+}
+
+#numbers:checked~label div.toggle-dot {
+    @apply translate-x-4
+}
+
+#symbols:checked~label div.toggle-dot {
+    @apply translate-x-4
+}
+
+#uppercase:checked~.toggle-label>div {
+    @apply bg-indigo-500
+}
+
+#lowercase:checked~.toggle-label>div {
+    @apply bg-indigo-500
+}
+
+#numbers:checked~.toggle-label>div {
+    @apply bg-indigo-500
+}
+
+#symbols:checked~.toggle-label>div {
+    @apply bg-indigo-500
+}
+
 @tailwind components;
 @tailwind utilities;
