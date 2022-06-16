@@ -3,17 +3,16 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
 import { generatePassword } from '../utils'
 import { Toaster, toast } from 'react-hot-toast'
-import { ToggleButton } from '../components/ToggleButton'
 import { ConfigItem } from '../components/ConfigItem'
 
 const Home: NextPage = () => {
 
   const [password, setPassword] = useState('')
-  const [uppercase, setUppercase] = useState(true)
+  const [uppercase, _] = useState(true)
   const [lowercase, setLowercase] = useState(true)
-  const [numbers, setNumbers] = useState(false)
+  const [numbers, setNumbers] = useState(true)
   const [symbols, setSymbols] = useState(false)
-  const [length, setLength] = useState(10)
+  const [length, setLength] = useState(16)
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLength(e.target.valueAsNumber)
@@ -85,30 +84,6 @@ const Home: NextPage = () => {
               <input type="range" name="length" id="length" value={length} onChange={handleSliderChange} />
               <p>{length}</p>
             </div>
-            {/* <div className='text-left space-y-3'>
-              <div className='flex items-center gap-2 sm:mt-6'>
-                <input
-                  type="checkbox"
-                  name="uppercase"
-                  id="uppercase"
-                  checked={uppercase}
-                  onChange={handleUppercaseChange}
-                />
-                <label htmlFor="uppercase" className='cursor-pointer'>Uppercase</label>
-              </div>
-              <div className='flex items-center gap-2'>
-                <input type="checkbox" name="lowercase" id="lowercase" checked={lowercase} onChange={handleLowercaseChange} />
-                <label htmlFor="lowercase" className='cursor-pointer'>Lowercase</label>
-              </div>
-              <div className='flex items-center gap-2'>
-                <input type="checkbox" name="numbers" id="numbers" checked={numbers} onChange={handleNumbersChange} />
-                <label htmlFor="numbers" className='cursor-pointer'>Numbers</label>
-              </div>
-              <div className='flex items-center gap-2'>
-                <input type="checkbox" name="symbols" id="symbols" checked={symbols} onChange={handleSymbolsChange} />
-                <label htmlFor="symbols" className='cursor-pointer'>Symbols</label>
-              </div>
-            </div> */}
           </div>
 
           <div className="text-left space-y-3">
