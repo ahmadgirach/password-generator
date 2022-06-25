@@ -120,7 +120,7 @@ const Home: NextPage = () => {
       <main className="w-full flex flex-1 flex-col items-center justify-center gap-4 px-20 text-center">
         <ThemeButtons checked={dark} onChangeHandler={handleThemeChange} />
         <Headings />
-        <section className="rounded-md shadow-xl shadow-darkPrimary flex flex-col justify-center items-center gap-10 p-10 dark:shadow-darkSecondary">
+        <section className="rounded-md shadow-xl shadow-darkPrimary flex flex-col justify-center items-center gap-6 p-10 dark:shadow-darkSecondary">
           <PasswordArea
             password={password}
             copyToClipboard={copyToClipboard}
