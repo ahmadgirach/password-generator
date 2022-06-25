@@ -1,42 +1,41 @@
-const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVQXYZ'
-const LOWERCASE = 'abcdefghijklmnopqrstuvqxyz'
-const NUMBERS = '0123456789'
-const SYMBOLS = '!@#$%-'
+const UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVQXYZ";
+const LOWERCASE = "abcdefghijklmnopqrstuvqxyz";
+const NUMBERS = "0123456789";
+const SYMBOLS = "!@#$%-";
 
 const getRandomNumber = (length: number) => {
-    return Math.floor(Math.random() * length)
-}
+  return Math.floor(Math.random() * length);
+};
 
 export const generatePassword = (
-    uppercase: boolean,
-    lowercase: boolean,
-    numbers: boolean,
-    symbols: boolean,
-    length: number
+  uppercase: boolean,
+  lowercase: boolean,
+  numbers: boolean,
+  symbols: boolean,
+  length: number
 ) => {
+  let password = "";
+  let chosenCharacters = "";
 
-    let password = ''
-    let chosenCharacters = ''
+  if (uppercase) {
+    chosenCharacters += UPPERCASE;
+  }
 
-    if (uppercase) {
-        chosenCharacters += UPPERCASE
-    }
+  if (lowercase) {
+    chosenCharacters += LOWERCASE;
+  }
 
-    if (lowercase) {
-        chosenCharacters += LOWERCASE
-    }
+  if (numbers) {
+    chosenCharacters += NUMBERS;
+  }
 
-    if (numbers) {
-        chosenCharacters += NUMBERS
-    }
+  if (symbols) {
+    chosenCharacters += SYMBOLS;
+  }
 
-    if (symbols) {
-        chosenCharacters += SYMBOLS
-    }
+  for (let index = 0; index < length; ++index) {
+    password += chosenCharacters[getRandomNumber(chosenCharacters.length)];
+  }
 
-    for (let index = 0; index < length; ++index) {
-        password += chosenCharacters[getRandomNumber(chosenCharacters.length)]
-    }
-
-    return password
-}
+  return password;
+};
