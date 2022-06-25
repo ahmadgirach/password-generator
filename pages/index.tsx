@@ -5,6 +5,7 @@ import { generatePassword } from '../utils'
 import { Toaster, toast } from 'react-hot-toast'
 import { ConfigItem } from '../components/ConfigItem'
 import { ToggleButton } from '../components/ToggleButton'
+import { Footer } from '../components/Footer'
 
 const Home: NextPage = () => {
 
@@ -146,19 +147,10 @@ const Home: NextPage = () => {
         </section>
       </main >
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        &copy; {new Date().getFullYear()}
-        <a
-          className="font-bold"
-          href="https://bio.link/ahmadgirach"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          &nbsp;Ahmad Girach
-        </a>
-      </footer>
+      <Footer />
 
       <Toaster />
+
     </div >
   )
 }
