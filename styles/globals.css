@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Telex:wght@400;500;600&display=swap');
 
 @tailwind base;
 
@@ -18,6 +18,10 @@
     @apply translate-x-4
 }
 
+#toggle:checked~label div.toggle-dot {
+    @apply translate-x-4
+}
+
 #uppercase:checked~.toggle-label>div {
     @apply bg-indigo-500
 }
@@ -32,6 +36,42 @@
 
 #symbols:checked~.toggle-label>div {
     @apply bg-indigo-500
+}
+
+#toggle:checked~.toggle-label>div {
+    @apply bg-indigo-500
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    @apply w-full h-2 cursor-pointer shadow-sm shadow-black bg-indigo-300 border border-black
+}
+
+input[type=range]::-webkit-slider-thumb {
+    @apply shadow-sm shadow-black border border-black h-8 w-4 rounded-md cursor-pointer appearance-none -mt-3
+}
+
+input[type=range]::-moz-range-track {
+    @apply w-full h-2 cursor-pointer shadow-sm shadow-black bg-indigo-500 border border-black rounded-md dark:bg-darkSecondary
+}
+
+input[type=range]::-moz-range-thumb {
+    @apply w-4 h-8 cursor-pointer shadow-sm shadow-black bg-white border border-black rounded-md dark:bg-neutral-300
+}
+
+input[type=range]::-ms-track {
+    @apply w-full h-3 cursor-pointer bg-transparent border-transparent text-transparent
+}
+
+input[type=range]::-ms-fill-lower {
+    @apply border border-black rounded-lg shadow-sm shadow-black bg-indigo-500
+}
+
+input[type=range]::-ms-fill-upper {
+    @apply border border-black rounded-lg shadow-sm shadow-black bg-indigo-500
+}
+
+input[type=range]::-ms-thumb {
+    @apply mt-px shadow-sm shadow-black border border-black h-8 w-4 rounded-md bg-white cursor-pointer dark:bg-neutral-300
 }
 
 @tailwind components;
