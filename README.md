@@ -25,3 +25,7 @@ A random, strong password generator tool using Next.js, TypeScript and Tailwind 
 - Slider Design by [CSS Portal](https://www.cssportal.com/style-input-range)
 - Configuration design inspired by [Sikriti Dakua](https://codepen.io/dev_loop/pen/vYYxvbz)
 - Icons by [Hero Icons](https://heroicons.com)
+
+### Support
+
+Show your 💖 by starring the repo.
