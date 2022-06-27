@@ -19,8 +19,7 @@ export const PasswordArea = ({
         rows={10}
         className="bg-indigo-50 outline-none rounded-md text-center text-xl text-black tracking-wide py-2 px-4 dark:text-darkPrimary dark:bg-indigo-200 w-11/12"
         readOnly
-      >
-      </textarea>
+      ></textarea>
       <div className="flex flex-col justify-center items-center md:flex-row w-full gap-3">
         <button
           title="Copy to Clipboard"

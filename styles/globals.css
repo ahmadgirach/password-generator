@@ -1,44 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@400;500;600&display=swap");
 
 @tailwind base;
 
-#uppercase:checked~label div.toggle-dot {
+#uppercase:checked ~ label div.toggle-dot {
   @apply translate-x-4;
 }
 
-#lowercase:checked~label div.toggle-dot {
+#lowercase:checked ~ label div.toggle-dot {
   @apply translate-x-4;
 }
 
-#numbers:checked~label div.toggle-dot {
+#numbers:checked ~ label div.toggle-dot {
   @apply translate-x-4;
 }
 
-#symbols:checked~label div.toggle-dot {
+#symbols:checked ~ label div.toggle-dot {
   @apply translate-x-4;
 }
 
-#toggle:checked~label div.toggle-dot {
+#toggle:checked ~ label div.toggle-dot {
   @apply translate-x-4;
 }
 
-#uppercase:checked~.toggle-label>div {
+#uppercase:checked ~ .toggle-label > div {
   @apply bg-indigo-500;
 }
 
-#lowercase:checked~.toggle-label>div {
+#lowercase:checked ~ .toggle-label > div {
   @apply bg-indigo-500;
 }
 
-#numbers:checked~.toggle-label>div {
+#numbers:checked ~ .toggle-label > div {
   @apply bg-indigo-500;
 }
 
-#symbols:checked~.toggle-label>div {
+#symbols:checked ~ .toggle-label > div {
   @apply bg-indigo-500;
 }
 
-#toggle:checked~.toggle-label>div {
+#toggle:checked ~ .toggle-label > div {
   @apply bg-indigo-500;
 }
 

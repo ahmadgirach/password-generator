@@ -39,3 +39,9 @@ export const generatePassword = (
 
   return password;
 };
+
+export const isFireFoxBrowser = () => {
+  const userAgent =
+    typeof navigator !== "undefined" ? navigator.userAgent.toString() : "";
+  return userAgent.includes("Firefox");
+};

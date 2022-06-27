@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { generatePassword } from "../utils";
+import { generatePassword, isFireFoxBrowser } from "../utils";
 import { Toaster, toast } from "react-hot-toast";
 import { Footer } from "../components/Footer";
 import { Headings } from "../components/Headings";
@@ -19,7 +19,8 @@ const Home: NextPage = () => {
   const [dark, setDark] = useState(false);
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setLength(e.target.valueAsNumber);
+    const length = e.target.valueAsNumber;
+    if (length) setLength(length);
   };
 
   const handleUppercaseChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,6 +81,8 @@ const Home: NextPage = () => {
     length,
   ]);
 
+  const isFireFox = isFireFoxBrowser();
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-primary text-gray-700 dark:bg-darkPrimary dark:text-darkSecondary">
       <Head>
@@ -137,6 +140,7 @@ const Home: NextPage = () => {
             handleLowercaseChange={handleLowercaseChange}
             handleNumbersChange={handleNumbersChange}
             handleSymbolsChange={handleSymbolsChange}
+            isFireFox={isFireFox}
           />
         </section>
       </main>
