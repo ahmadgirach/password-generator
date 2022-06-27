@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   const [lowercase, setLowercase] = useState(true);
   const [numbers, setNumbers] = useState(true);
   const [symbols, setSymbols] = useState(false);
-  const [length, setLength] = useState(16);
+  const [length, setLength] = useState(20);
   const [dark, setDark] = useState(false);
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -117,10 +117,10 @@ const Home: NextPage = () => {
         <meta property="twitter:image" content="" />
       </Head>
 
-      <main className="w-full flex flex-1 flex-col items-center justify-center gap-4 px-20 text-center">
+      <main className="w-full flex flex-1 flex-col items-center justify-center gap-3 px-20 text-center">
         <ThemeButtons checked={dark} onChangeHandler={handleThemeChange} />
         <Headings />
-        <section className="rounded-md shadow-xl shadow-darkPrimary flex flex-col justify-center items-center gap-6 p-10 dark:shadow-darkSecondary">
+        <section className="rounded-md shadow-xl shadow-darkPrimary flex flex-col justify-center items-center gap-6 p-10 dark:shadow-darkSecondary md:flex-row">
           <PasswordArea
             password={password}
             copyToClipboard={copyToClipboard}

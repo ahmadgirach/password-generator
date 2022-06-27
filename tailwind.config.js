@@ -8,11 +8,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', 'sans-serif']
+        primary: ['IBM Plex Sans', 'sans-serif'],
+        secondary: ['Inter', 'sans-serif']
       },
       colors: {
-        darkPrimary: '#0a192f',
-        darkSecondary: '#8892b0'
+        darkPrimary: '#08162b',
+        darkSecondary: '#94A3B8'
       }
     },
   },

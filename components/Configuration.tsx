@@ -26,8 +26,8 @@ export const Configuration = ({
   handleSymbolsChange,
 }: Props) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-4">
-      <h3 className="text-lg font-bold uppercase">Configuration</h3>
+    <div className="flex flex-col justify-center items-center gap-4 font-secondary">
+      <h3 className="text-lg font-bold uppercase font-primary">Configuration</h3>
       <div className="space-y-2">
         <p className="text-lg">Password Length</p>
         <input
