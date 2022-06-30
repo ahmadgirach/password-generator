@@ -8,6 +8,7 @@ import { Headings } from "../components/Headings";
 import { ThemeButtons } from "../components/ThemeButtons";
 import { Configuration } from "../components/Configuration";
 import { PasswordArea } from "../components/PasswordArea";
+import { useDarkMode } from "../hooks/useDarkMode";
 
 const Home: NextPage = () => {
   const [password, setPassword] = useState("");
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
   const [numbers, setNumbers] = useState(true);
   const [symbols, setSymbols] = useState(false);
   const [length, setLength] = useState(20);
-  const [dark, setDark] = useState(false);
+  const [theme, setTheme] = useDarkMode();
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const length = e.target.valueAsNumber;
@@ -42,16 +43,8 @@ const Home: NextPage = () => {
 
   const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = e.target;
-    const root =
-      typeof window !== "undefined" ? window.document.documentElement : null;
-    if (root) {
-      if (checked) {
-        root.classList.add("dark");
-      } else {
-        root.classList.remove("dark");
-      }
-    }
-    setDark(checked);
+    const theme = checked ? "dark" : "light";
+    setTheme(theme);
   };
 
   const regeneratePassword = () => {
@@ -121,7 +114,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="w-full flex flex-1 flex-col items-center justify-center gap-3 px-20 text-center">
-        <ThemeButtons checked={dark} onChangeHandler={handleThemeChange} />
+        <ThemeButtons
+          checked={theme === "dark"}
+          onChangeHandler={handleThemeChange}
+        />
         <Headings />
         <section className="rounded-md shadow-xl shadow-darkPrimary flex flex-col justify-center items-center gap-6 p-10 dark:shadow-darkSecondary md:flex-row">
           <PasswordArea

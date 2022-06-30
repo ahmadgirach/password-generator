@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['IBM Plex Sans', 'sans-serif'],
+        primary: ['Fira Sans', 'sans-serif'],
         secondary: ['Inter', 'sans-serif']
       },
       colors: {
