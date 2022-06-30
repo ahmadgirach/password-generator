@@ -9,6 +9,7 @@ import { ThemeButtons } from "../components/ThemeButtons";
 import { Configuration } from "../components/Configuration";
 import { PasswordArea } from "../components/PasswordArea";
 import { useDarkMode } from "../hooks/useDarkMode";
+import { Header } from "../components/Header";
 
 const Home: NextPage = () => {
   const [password, setPassword] = useState("");
@@ -78,40 +79,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-primary text-gray-700 dark:bg-darkPrimary dark:text-darkSecondary">
-      <Head>
-        <title>Random Password Generator</title>
-        <link rel="icon" href="/favicon.ico" />
-
-        <meta name="title" content="Generate Random Password" />
-        <meta
-          name="description"
-          content="Avoid using common password patterns and use this tool to generate random password."
-        />
-        <meta name="copyright" content="Ahmad Girach" />
-
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://random-passsword-generator.netlify.app/"
-        />
-        <meta property="og:title" content="Generate Random Password" />
-        <meta
-          property="og:description"
-          content="Avoid using common password patterns and use this tool to generate random password."
-        />
-        <meta property="og:image" content="" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://random-passsword-generator.netlify.app/"
-        />
-        <meta property="twitter:title" content="Generate Random Password" />
-        <meta
-          property="twitter:description"
-          content="Avoid using common password patterns and use this tool to generate random password."
-        />
-        <meta property="twitter:image" content="" />
-      </Head>
+      <Header />
 
       <main className="w-full flex flex-1 flex-col items-center justify-center gap-3 px-20 text-center">
         <ThemeButtons
