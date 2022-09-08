@@ -11,17 +11,20 @@ export const PasswordArea = ({
 }: Props) => {
   return (
     <div className="flex flex-col justify-center items-center gap-2">
-      <textarea
-        name="password"
-        id="password"
-        value={password}
-        cols={30}
-        rows={10}
-        className="bg-indigo-50 outline-none rounded-md text-center text-xl text-black tracking-wide py-2 px-4 dark:text-darkPrimary dark:bg-indigo-200 w-11/12"
-        readOnly
-      ></textarea>
+      <label htmlFor="password">
+        <textarea
+          name="password"
+          id="password"
+          value={password}
+          cols={30}
+          rows={10}
+          className="bg-indigo-50 outline-none rounded-md text-center text-xl text-black tracking-wide py-2 px-4 dark:text-darkPrimary dark:bg-indigo-200 w-11/12"
+          readOnly
+        ></textarea>
+      </label>
       <div className="flex flex-col justify-center items-center md:flex-row w-full gap-3">
         <button
+          aria-label="Copy to Clipboard"
           title="Copy to Clipboard"
           onClick={copyToClipboard}
           className="bg-indigo-200 py-2 px-4 rounded-md w-16 dark:text-darkPrimary"
@@ -42,6 +45,7 @@ export const PasswordArea = ({
           </svg>
         </button>
         <button
+          aria-label="Regenerate Password"
           title="Regenerate Password"
           onClick={regeneratePassword}
           className="bg-indigo-200 py-2 px-4 rounded-md w-16 dark:text-darkPrimary"

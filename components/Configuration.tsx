@@ -46,16 +46,18 @@ export const Configuration = ({
       </h3>
       <div className="space-y-2">
         <p className="text-lg">Password Length</p>
-        <input
-          type={inputType}
-          name="length"
-          id="length"
-          value={length}
-          onChange={handleSliderChange}
-          className="w-full h-10 mx-0 my-2 appearance-none dark:bg-darkPrimary focus:outline-none"
-          min={8}
-          max={100}
-        />
+        <label htmlFor="length">
+          <input
+            type={inputType}
+            name="length"
+            id="length"
+            value={length}
+            onChange={handleSliderChange}
+            className="w-full h-10 mx-0 my-2 appearance-none dark:bg-darkPrimary focus:outline-none"
+            min={8}
+            max={100}
+          />
+        </label>
         <p>{pContent}</p>
       </div>
       <div className="text-left space-y-3">

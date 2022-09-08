@@ -8,7 +8,7 @@ type Props = {
 export const ThemeButtons = ({ checked, onChangeHandler }: Props) => {
   return (
     <div className="flex justify-end items-center gap-2 mt-6">
-      <button>
+      <button aria-label="light">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -29,7 +29,7 @@ export const ThemeButtons = ({ checked, onChangeHandler }: Props) => {
         checked={checked}
         onChangeHandler={onChangeHandler}
       />
-      <button>
+      <button aria-label="dark">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
