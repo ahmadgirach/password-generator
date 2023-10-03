@@ -55,7 +55,7 @@ export const Configuration = ({
             onChange={handleSliderChange}
             className="w-full h-10 mx-0 my-2 appearance-none dark:bg-darkPrimary focus:outline-none"
             min={8}
-            max={100}
+            max={128}
           />
         </label>
         <p>{pContent}</p>

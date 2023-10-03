@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { generatePassword, isFireFoxBrowser } from "../utils";
 import { Toaster, toast } from "react-hot-toast";
@@ -10,6 +9,7 @@ import { Configuration } from "../components/Configuration";
 import { PasswordArea } from "../components/PasswordArea";
 import { useDarkMode } from "../hooks/useDarkMode";
 import { Header } from "../components/Header";
+import { Disclaimer } from "../components/Disclaimer";
 
 const Home: NextPage = () => {
   const [password, setPassword] = useState("");
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(password);
     return toast("Copied to Clipboard!", {
-      duration: 1200,
+      duration: 1500,
       position: "top-right",
     });
   };
@@ -80,6 +80,8 @@ const Home: NextPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen font-primary text-gray-700 dark:bg-darkPrimary dark:text-darkSecondary">
       <Header />
+
+      <Disclaimer />
 
       <main className="w-full flex flex-1 flex-col items-center justify-center gap-3 px-20 text-center">
         <ThemeButtons

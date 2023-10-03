@@ -1,7 +1,7 @@
 const UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVQXYZ";
 const LOWERCASE = "abcdefghijklmnopqrstuvqxyz";
 const NUMBERS = "0123456789";
-const SYMBOLS = "!@#$%-";
+const SYMBOLS = "`~!@#$%^&*()-_=,.<>{}[]():;";
 
 const getRandomNumber = (length: number) => {
   return Math.floor(Math.random() * length);
