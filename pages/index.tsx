@@ -20,9 +20,11 @@ const Home: NextPage = () => {
   const [length, setLength] = useState(20);
   const [theme, setTheme] = useDarkMode();
 
+  const MAX_LENGTH = 128;
+
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const length = e.target.valueAsNumber;
-    if (length) setLength(length);
+    if (length) setLength(length <= MAX_LENGTH ? length : MAX_LENGTH);
   };
 
   const handleUppercaseChange = (e: React.ChangeEvent<HTMLInputElement>) => {
